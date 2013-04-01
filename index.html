@@ -1,68 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet/less" type="text/css" href="less/styles.less">
-    <script src="js/less.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js" type="text/javascript"></script>
-    <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?52"></script>
-    <script type="text/javascript">
-        VK.init({apiId: 3129214, onlyWidgets: true});
-    </script>
 
-    <title>Minsk MongoDB Meetup #6 / MongoDB Belarus</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/jquery.backstretch.min.js" type="text/javascript"></script>
+    <title>Minsk MongoDB Meetup #9 / MongoDB Belarus</title>
 </head>
 <body>
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-    <div class="one" style="background: rgb(255, 255, 255) transparent;
-    background: rgba(255, 255, 255, 0.9);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5ffffff, endColorstr=#e5ffffff);
-	-ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5ffffff, endColorstr=#e5ffffff)';">
-        <img src="http://www.vr-online.ru/sites/default/files/blog/2012/02/mongodb_logo_300x100_png_42701.png">
+
+    <div class="info">
+        <img src="images/mongo-logo.png">
         <div class="line"></div>
         <div class="text">
-        <h1>Minsk MongoDB Meetup #7</h1>
-        <p><b>Roadmap:</b></p>
-        <ul>
-            <li>Scaling MongoDB | Sergey Gavruk</li>
-        </ul>
-           <p>
-            <b>October 4, 2012</b><br>
-            <p id="seeyou"><a href="https://www.facebook.com/events/372147449527107"><b>Страница события на facebook</b></a></p>
+            <h1>Minsk MongoDB Meetup #9</h1>
+            <p><b>Roadmap:</b></p>
+            <ul>
+                <li>- Deploying MongoDB with Chef | Yauhen Artsiukhou</li>
+                <li>- Let's try MongoDB 2.4 | Uladzimir Mihura</li>
+            </ul>
+            <b>October 4, 2012</b>
+            <br/>
+            <p class="seeyou">
+                <a href="https://www.facebook.com/events/252886578167314"><b>Страница события на facebook</b></a>
+            </p>
         </div>
     </div>
-    <div class="two"style="background: rgb(255, 255, 255) transparent;
-    background: rgba(255, 255, 255, 0.9);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5ffffff, endColorstr=#e5ffffff);
-	-ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#e5ffffff, endColorstr=#e5ffffff)';">
-        <div class="social"><a href="https://twitter.com/share" class="twitter-share-button" data-text="Учавствуйте в MongoDB M7etup #6" data-hashtags="minsk" data-lang="en">Tweet</a></div>
-        <div class="social"><div class="g-plusone" data-size="medium"></div></div>
-        <div class="social"><div class="fb-like" data-href="https://www.mongodb.by" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div></div>
-        <div class="social"><div id="vk_like"></div></div>
+    <div class="likes">
+        <div class="social">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-text="Учавствуйте в MongoDB Meetup #9" data-hashtags="minsk" data-lang="ru">Tweet</a>
+        </div>
+        <div class="social">
+            <div class="g-plusone" data-size="medium"></div>
+        </div>
+        <div class="social">
+            <div class="fb-like" data-href="https://www.mongodb.by" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="verdana"></div>
+        </div>
+        <div class="social">
+            <div id="vk_like"></div>
+        </div>
     </div>
+
+    <script type="text/javascript" src="https://vk.com/js/api/openapi.js?52"></script>
     <script>
+        // Background image (Thanks to Alex Zaitsev)
         $.backstretch("http://azaitsev.com/images/roof_nemiga_day/02.jpg");
-    </script>
-    <script>
+
+        // Facebook like button
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+ 
+        // Twitter button
         !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
-    </script>
-    <script type="text/javascript">
+
+        // VK button
+        VK.init({apiId: 3129214, onlyWidgets: true});
         VK.Widgets.Like("vk_like", {type: "button"});
-    </script>
-     <script type="text/javascript">
+
+        // Google+ button
         (function() {
         var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-         po.src = 'https://apis.google.com/js/plusone.js';
-         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-     })();
-    </script>
+        po.src = 'https://apis.google.com/js/plusone.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+
+   </script>
 </body>
 </html>
